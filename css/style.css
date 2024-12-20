@@ -1,0 +1,130 @@
+.hover-bounce {
+    transition: transform 0.3s ease-in-out;
+}
+.hover-bounce:hover {
+    transform: translateY(-10px);
+}
+
+/* Estilo para o flip card */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1500px; /* Aumenta a profundidade da perspectiva */
+    margin-bottom: 20px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    transform: translateZ(0); /* Estado inicial */
+}
+
+/* Efeito ao passar o mouse: rotaciona e traz para frente */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg) translateZ(50px); /* Move o cartão para frente durante o flip */
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 24px;
+}
+
+.flip-card-front {
+    background-color: #fff;
+}
+
+.flip-card-back {
+    background-color: #007bff;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: #007bff;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #0056b3;
+}
+
+.img-fluid {
+    border-radius: 24px;
+    height: 500px;
+    width: 500px;
+}
+
+.img-fluid2 {
+    border-radius: 24px;
+    height: 300px;
+    width: 300px;
+}
+
+/* Ajuste responsivo */
+@media (min-width: 568px) {
+    .col-md-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+        padding-left: 50px;
+    }
+}
+
+.row2 {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 968px) {
+    .row2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .row2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 60px;
+    }
+}
+
+@media (max-width: 568px) {
+    .row2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 50px;
+    }
+}
+
+.bg-primary {
+    --bs-bg-opacity: 1;
+    background-color: #6ee618 !important;
+}
+
+.bg-dark {
+    --bs-bg-opacity: 1;
+    background-color: #398829 !important;
+}
+
+.navbar-dark {
+    --bs-navbar-color: white;
+}
